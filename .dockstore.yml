@@ -13,7 +13,7 @@ workflows:
         affiliation: Genentech
     filters:
       tags:
-        - /.*/
+        - 2.4.1
       branches:
         - master
   - name: Spaceranger
@@ -28,7 +28,7 @@ workflows:
         affiliation: Genentech
     filters:
       tags:
-        - /.*/
+        - 2.4.1
       branches:
         - master
   - name: STARsolo
@@ -43,7 +43,7 @@ workflows:
         affiliation: Genentech
     filters:
       tags:
-        - /.*/
+        - 2.4.1
       branches:
         - master
   - name: GeoMx_fastq_to_dcc
@@ -58,7 +58,7 @@ workflows:
         affiliation: Genentech
     filters:
       tags:
-        - /.*/
+        - 2.4.1
       branches:
         - master
   - name: GeoMx_dcc_to_count_matrix
@@ -73,7 +73,7 @@ workflows:
         affiliation: Genentech
     filters:
       tags:
-        - /.*/
+        - 2.4.1
       branches:
         - master
   - name: Demultiplexing
@@ -88,7 +88,7 @@ workflows:
         affiliation: Genentech
     filters:
       tags:
-        - /.*/
+        - 2.4.1
       branches:
         - master
   - name: Cumulus
@@ -103,7 +103,7 @@ workflows:
         affiliation: Genentech
     filters:
       tags:
-        - /.*/
+        - 2.4.1
       branches:
         - master
   - name: Smart-Seq2
@@ -117,7 +117,7 @@ workflows:
         affiliation: Genentech
     filters:
       tags:
-        - /.*/
+        - 2.4.1
       branches:
         - master
   - name: Cellranger_atac_aggr
@@ -131,7 +131,7 @@ workflows:
         affiliation: Genentech
     filters:
       tags:
-        - /.*/
+        - 2.4.1
       branches:
         - master
   - name: Cellranger_create_reference
@@ -146,7 +146,7 @@ workflows:
         affiliation: Genentech
     filters:
       tags:
-        - /.*/
+        - 2.4.1
       branches:
         - master
   - name: Cellranger_atac_create_reference
@@ -161,7 +161,7 @@ workflows:
         affiliation: Genentech
     filters:
       tags:
-        - /.*/
+        - 2.4.1
       branches:
         - master
   - name: Cellranger_vdj_create_reference
@@ -176,7 +176,7 @@ workflows:
         affiliation: Genentech
     filters:
       tags:
-        - /.*/
+        - 2.4.1
       branches:
         - master
   - name: STARsolo_create_reference
@@ -191,7 +191,7 @@ workflows:
         affiliation: Genentech
     filters:
       tags:
-        - /.*/
+        - 2.4.1
       branches:
         - master
   - name: Smart-Seq2_create_reference
@@ -206,7 +206,7 @@ workflows:
         affiliation: Genentech
     filters:
       tags:
-        - /.*/
+        - 2.4.1
       branches:
         - master
   - name: CellBender
@@ -221,6 +221,6 @@ workflows:
         affiliation: Genentech
     filters:
       tags:
-        - /.*/
+        - 2.4.1
       branches:
         - master
