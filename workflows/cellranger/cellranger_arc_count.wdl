@@ -153,7 +153,7 @@ task run_cellranger_arc_count {
                     check_call(call_args)
                 fout.write(os.path.abspath(target) + ',' + samples[i] + ',' + ('Gene Expression' if data_types[i] == 'rna' else 'Chromatin Accessibility') + '\n')
 
-        call_args = ['cellranger-arc', 'count', '--id=results', '--libraries=libraries.csv', '--reference=genome_dir', '--jobmode=local']
+        call_args = ['cellranger-arc', 'count', '--id=~{link_id}', '--libraries=libraries.csv', '--reference=genome_dir', '--jobmode=local']
         if '~{gex_exclude_introns}' == 'true':
             call_args.append('--gex-exclude-introns')
         if '~{no_bam}' == 'true':
@@ -168,13 +168,13 @@ task run_cellranger_arc_count {
         check_call(call_args)
         CODE
 
-        strato sync --backend ~{backend} -m results/outs "~{output_directory}"/~{link_id}
+        strato sync --backend ~{backend} -m ~{link_id} "~{output_directory}"/~{link_id}
     }
 
     output {
-        String output_count_directory = "~{output_directory}/~{link_id}"
-        String output_metrics_summary = "~{output_directory}/~{link_id}/summary.csv"
-        String output_web_summary = "~{output_directory}/~{link_id}/web_summary.html"
+        String output_count_directory = "~{output_directory}/~{link_id}/outs"
+        String output_metrics_summary = "~{output_directory}/~{link_id}/outs/summary.csv"
+        String output_web_summary = "~{output_directory}/~{link_id}/outs/web_summary.html"
         File monitoringLog = "monitoring.log"
     }
 
