@@ -28,7 +28,7 @@ workflow demultiplexing {
         # Backend
         String backend = "gcp"
         # Reference Index TSV
-        File ref_index_file = "gs://regev-lab/resources/cellranger/index.tsv"
+        File ref_index_file = "gs://d-nhp-gtex-resources/references/reference_index.tsv"
 
         # For demuxEM
         # The Dirichlet prior concentration parameter (alpha) on samples. An alpha value < 1.0 will make the prior sparse. [default: 0.0]

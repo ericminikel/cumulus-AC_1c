@@ -91,6 +91,7 @@ workflows:
         - /.*/
       branches:
         - master
+        - branch_from_tag_2.5.0
   - name: Cumulus
     subclass: WDL
     publish: true
@@ -106,6 +107,7 @@ workflows:
         - /.*/
       branches:
         - master
+        - branch_from_tag_2.5.0
   - name: Smart-Seq2
     subclass: WDL
     primaryDescriptorPath: /workflows/smartseq2/smartseq2.wdl
