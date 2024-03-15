@@ -32,6 +32,7 @@ workflows:
         - /.*/
       branches:
         - master
+        - branch_from_tag_2.4.1
   - name: STARsolo
     subclass: WDL
     publish: true
@@ -47,6 +48,7 @@ workflows:
         - /.*/
       branches:
         - master
+        - branch_from_tag_2.4.1
   - name: GeoMx_fastq_to_dcc
     subclass: WDL
     publish: true
@@ -62,6 +64,7 @@ workflows:
         - /.*/
       branches:
         - master
+        - branch_from_tag_2.4.1
   - name: GeoMx_dcc_to_count_matrix
     subclass: WDL
     publish: true
@@ -77,6 +80,7 @@ workflows:
         - /.*/
       branches:
         - master
+        - branch_from_tag_2.4.1
   - name: Demultiplexing
     subclass: WDL
     publish: true
@@ -92,6 +96,7 @@ workflows:
         - /.*/
       branches:
         - master
+        - branch_from_tag_2.4.1
   - name: Cumulus
     subclass: WDL
     publish: true
@@ -122,6 +127,7 @@ workflows:
         - /.*/
       branches:
         - master
+        - branch_from_tag_2.4.1
   - name: Cellranger_atac_aggr
     subclass: WDL
     primaryDescriptorPath: /workflows/cellranger/cellranger_atac_aggr.wdl
@@ -200,6 +206,7 @@ workflows:
         - /.*/
       branches:
         - master
+        - branch_from_tag_2.4.1
   - name: Smart-Seq2_create_reference
     subclass: WDL
     publish: true
@@ -215,6 +222,7 @@ workflows:
         - /.*/
       branches:
         - master
+        - branch_from_tag_2.4.1
   - name: CellBender
     subclass: WDL
     publish: true
@@ -230,3 +238,4 @@ workflows:
         - /.*/
       branches:
         - master
+        - branch_from_tag_2.4.1
