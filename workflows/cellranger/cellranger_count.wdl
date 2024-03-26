@@ -223,7 +223,7 @@ task run_cellranger_count {
                     check_call(call_args)
                 fastqs_dirs.append(target)
 
-        call_args = ['cellranger', 'count', '--id=results', '--transcriptome=genome_dir', '--chemistry=~{chemistry}', '--jobmode=local']
+        call_args = ['cellranger', 'count', '--id=~{sample_id}', '--transcriptome=genome_dir', '--chemistry=~{chemistry}', '--jobmode=local']
 
         if samples is None: # not Feature Barcode
             call_args.extend(['--sample=~{sample_id}', '--fastqs=' + ','.join(fastqs_dirs)])
@@ -257,13 +257,13 @@ task run_cellranger_count {
         check_call(call_args)
         CODE
 
-        strato sync -m results/outs "~{output_directory}"/~{sample_id}
+        strato sync -m ~{sample_id} "~{output_directory}"/~{sample_id}
     }
 
     output {
-        String output_count_directory = "~{output_directory}/~{sample_id}"
-        String output_metrics_summary = "~{output_directory}/~{sample_id}/metrics_summary.csv"
-        String output_web_summary = "~{output_directory}/~{sample_id}/web_summary.html"
+        String output_count_directory = "~{output_directory}/~{sample_id}/outs"
+        String output_metrics_summary = "~{output_directory}/~{sample_id}/outs/metrics_summary.csv"
+        String output_web_summary = "~{output_directory}/~{sample_id}/outs/web_summary.html"
         File monitoringLog = "monitoring.log"
     }
 

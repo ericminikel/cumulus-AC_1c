@@ -96,7 +96,7 @@ workflow cellranger_workflow {
         File? cmo_set
 
         # Index TSV file
-        File acronym_file = "gs://regev-lab/resources/cellranger/index.tsv"
+        File acronym_file = "gs://d-nhp-gtex-resources/references/reference_index.tsv"
 
         # 7.2.0, 7.1.0, 7.0.1, 7.0.0, 6.1.2, 6.1.1, 6.0.2, 6.0.1, 6.0.0, 5.0.1, 5.0.0
         String cellranger_version = "7.2.0"

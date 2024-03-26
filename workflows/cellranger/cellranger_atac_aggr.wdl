@@ -131,7 +131,7 @@ task run_cellranger_atac_aggr {
                 print(' '.join(call_args))
                 check_call(call_args)
                 counts.append(library_id)
-                fout.write(library_id + "," + current_dir + '/' + library_id + "/fragments.tsv.gz," + current_dir + '/' + library_id + "/singlecell.csv\n")
+                fout.write(library_id + "," + current_dir + '/' + library_id + "/outs/fragments.tsv.gz," + current_dir + '/' + library_id + "/outs/singlecell.csv\n")
 
         call_args = ['cellranger-atac', 'aggr', '--id=results', '--reference=genome_dir', '--csv=aggr.csv', '--normalize=~{normalize}', '--jobmode=local']
         if '~{secondary}' != 'true':

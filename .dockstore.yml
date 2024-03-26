@@ -16,6 +16,7 @@ workflows:
         - /.*/
       branches:
         - master
+        - branch_from_tag_2.5.0
   - name: Spaceranger
     subclass: WDL
     publish: true
@@ -136,6 +137,7 @@ workflows:
         - /.*/
       branches:
         - master
+        - branch_from_tag_2.5.0
   - name: Cellranger_create_reference
     subclass: WDL
     publish: true
@@ -226,3 +228,4 @@ workflows:
         - /.*/
       branches:
         - master
+        - branch_from_tag_2.5.0

@@ -137,7 +137,7 @@ task run_cellranger_atac_count {
                 check_call(call_args)
             fastqs.append(target)
 
-        call_args = ['cellranger-atac', 'count', '--id=results', '--reference=genome_dir', '--fastqs=' + ','.join(fastqs), '--sample=~{sample_id}', '--jobmode=local']
+        call_args = ['cellranger-atac', 'count', '--id=~{sample_id}', '--reference=genome_dir', '--fastqs=' + ','.join(fastqs), '--sample=~{sample_id}', '--jobmode=local']
         if '~{force_cells}' != '':
             call_args.append('--force-cells=~{force_cells}')
         if '~{dim_reduce}' != '':
@@ -151,13 +151,13 @@ task run_cellranger_atac_count {
         check_call(call_args)
         CODE
 
-        strato sync --backend ~{backend} -m results/outs "~{output_directory}/~{sample_id}"
+        strato sync --backend ~{backend} -m ~{sample_id} "~{output_directory}/~{sample_id}"
     }
 
     output {
-        String output_count_directory = "~{output_directory}/~{sample_id}"
-        String output_metrics_summary = "~{output_directory}/~{sample_id}/summary.csv"
-        String output_web_summary = "~{output_directory}/~{sample_id}/web_summary.html"
+        String output_count_directory = "~{output_directory}/~{sample_id}/outs"
+        String output_metrics_summary = "~{output_directory}/~{sample_id}/outs/summary.csv"
+        String output_web_summary = "~{output_directory}/~{sample_id}/outs/web_summary.html"
         File monitoringLog = "monitoring.log"
     }
 
