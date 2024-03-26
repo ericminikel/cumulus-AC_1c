@@ -138,6 +138,21 @@ workflows:
       branches:
         - master
         - branch_from_tag_2.5.0
+  - name: Cellranger_aggr
+    subclass: WDL
+    primaryDescriptorPath: /workflows/cellranger/cellranger_aggr.wdl
+    testParameterFiles:
+      - /test/dummy.json
+    authors:
+      - name: Cumulus Team
+        email: cumulus-support@googlegroups.com
+        affiliation: Genentech
+    filters:
+      tags:
+        - /.*/
+      branches:
+        - master
+        - branch_from_tag_2.5.0
   - name: Cellranger_create_reference
     subclass: WDL
     publish: true
