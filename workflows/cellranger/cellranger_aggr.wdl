@@ -122,7 +122,7 @@ task run_cellranger_aggr {
 
     output {
         String output_aggr_directory = "~{output_directory}/~{aggr_id}"
-        File output_metrics_summary = "~{output_directory}/~{aggr_id}/outs/summary.csv"
+        File output_metrics_summary = "~{output_directory}/~{aggr_id}/outs/count/summary.json"
         File output_web_summary = "~{output_directory}/~{aggr_id}/outs/web_summary.html"
         File monitoringLog = "monitoring.log"
     }
