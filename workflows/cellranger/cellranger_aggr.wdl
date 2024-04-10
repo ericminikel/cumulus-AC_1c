@@ -108,7 +108,7 @@ task run_cellranger_aggr {
                 print(' '.join(call_args))
                 check_call(call_args)
                 counts.append(sample_id)
-                fout.write(sample_id + "," + current_dir + '/' + sample_id + "/outs/molecule_info.h5\n")
+                fout.write(sample_id + "," + current_dir + '/' + sample_id + "/molecule_info.h5\n")
 
         call_args = ['cellranger', 'aggr', '--id=~{aggr_id}', '--csv=aggr.csv', '--normalize=~{normalize}', '--jobmode=local']
         if '~{secondary}' != 'true':
